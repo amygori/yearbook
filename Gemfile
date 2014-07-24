@@ -42,4 +42,8 @@ gem 'faker'
 gem 'rabl-rails'
 gem 'devise'	
 gem 'rails-assets-backbone'
+gem 'bourbon'
+gem 'neat'
+gem 'bitters'
+gem 'refills'	
 

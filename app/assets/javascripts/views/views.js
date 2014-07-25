@@ -1,38 +1,48 @@
 //VIEW: login
 
 
-//VIEW: single user profile
-var UserView = Backbone.View.extend({
-	
-	template: _.template($'.profile-template'),
+//VIEW: single person profile
+var PersonView = Backbone.View.extend({
+
+	template: _.template($('.profile-template').html() || ''),
  
   	initialize: function () {
- 		$('.user-container').html(this.el);
- 		console.log(this);
-    	this.render();
+ 		this.listenTo(this.model, 'sync', this.render);
+     	this.model.fetch();
   	},
  
   	render: function () {
-    	this.$el.html(this.template(this.model.attributes)) //compile the template
-    	console.log('user profile render complete');
+    	var template = _.template($('.profile-template').html().trim());
+		var output = template({user: this.model.attributes});
+		$('.directory-container').html(output);
   	}
 });
 
 //VIEW: list of all users
 var DirectoryView = Backbone.View.extend({
-	
-	template: _.template($'.directory-template'),
 
 	initialize: function (){
-		$('.directory-container').html(this.el);
-		this.render();
+		this.listenTo(this.collection, 'sync', this.render);
+     	this.collection.fetch();
+	},
+
+	getUsers: function () {
+		var users = [];
+		_.each(this.collection.models, function(model) {
+			users.push(model.attributes);
+		});
+		return users;
 	},
 
 	render: function(){
-		_.each(user) function(){
-			this.$el.html(this.template({directory: this.collection})) //compile the template
-		}
-
-    	console.log('directory render complete');
+		var template = _.template($('.directory-template').html().trim());
+		var output = '';
+		_.each(this.getUsers(), function (user) {
+			output += template({user: user});
+		});
+		$('.directory-container').html(output);
 	}
 });
+//instantiate the directory view
+
+

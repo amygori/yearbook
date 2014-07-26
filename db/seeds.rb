@@ -80,3 +80,23 @@ end
 		admin: false,
 		role: "Staff")
 end
+
+Cohort.create(
+	season: 'Summer',
+	year: '2014')
+
+Cohort.create(
+	season: 'Fall',
+	year: '2014')
+
+Course.create(
+	name: 'Ruby on Rails')
+
+Course.create(
+	name: 'Front End')
+
+roles = ['Student', 'Teacher', 'Staff']
+roles.each do |role|
+	Role.create(
+		role: role)
+end

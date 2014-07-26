@@ -13,7 +13,7 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'dragonfly'
 gem 'faker'
 gem 'rabl-rails'
-gem 'devise'
+gem 'devise'	
 gem 'underscore-rails'
 gem 'rails-assets-backbone'
 gem 'bourbon'

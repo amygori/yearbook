@@ -98,5 +98,5 @@ Course.create(
 roles = ['Student', 'Teacher', 'Staff']
 roles.each do |role|
 	Role.create(
-		role: role)
+		position: role)
 end

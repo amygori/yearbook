@@ -14,11 +14,8 @@
 		twitter: "@user1#{n}",
 		github: "ghuser1#{n}",
 		linkedin: "liuser1#{n}",
-		course: "Ruby on Rails",
-		cohort: "Summer 2014",
 		bio: Faker::Lorem.paragraph,
-		admin: false,
-		role: "Student")
+		admin: false)
 end
 
 10.times do |n|
@@ -29,11 +26,8 @@ end
 		twitter: "@user2#{n}",
 		github: "ghuser2#{n}",
 		linkedin: "liuser2#{n}",
-		course: "Front End",
-		cohort: "Summer 2014",
 		bio: Faker::Lorem.paragraph,
-		admin: false,
-		role: "Student")
+		admin: false)
 end
 
 2.times do |n|
@@ -44,11 +38,8 @@ end
 		twitter: "@user3#{n}",
 		github: "ghuser3#{n}",
 		linkedin: "liuser3#{n}",
-		course: "Ruby on Rails",
-		cohort: "Summer 2014",
 		bio: Faker::Lorem.paragraph,
-		admin: false,
-		role: "Teacher")
+		admin: false)
 end
 
 2.times do |n|
@@ -59,11 +50,8 @@ end
 		twitter: "@user4#{n}",
 		github: "ghuser4#{n}",
 		linkedin: "liuser4#{n}",
-		course: "Front End",
-		cohort: "Summer 2014",
 		bio: Faker::Lorem.paragraph,
-		admin: false,
-		role: "Teacher")
+		admin: false)
 end
 
 3.times do |n|
@@ -74,11 +62,8 @@ end
 		twitter: "@user5#{n}",
 		github: "ghuser5#{n}",
 		linkedin: "liuser5#{n}",
-		course: "None",
-		cohort: "Summer 2014",
 		bio: Faker::Lorem.paragraph,
-		admin: false,
-		role: "Staff")
+		admin: false)
 end
 
 Cohort.create(

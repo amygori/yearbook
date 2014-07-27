@@ -39,6 +39,10 @@ class User < ActiveRecord::Base
 
   dragonfly_accessor :image
 
+  belongs_to :role
+  belongs_to :cohort
+  belongs_to :course
+
   before_save :ensure_authentication_token
 
   def ensure_authentication_token

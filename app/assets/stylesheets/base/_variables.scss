@@ -1,8 +1,9 @@
 // Typography
 $sans-serif: $helvetica;
-$serif: $georgia;
-$base-font-family: $sans-serif;
-$header-font-family: $base-font-family;
+$serif: "Adamina", serif; 
+$base-font-family: "Muli", sans-serif;
+$header-font-family: "Montserrat", sans-serif; ;
+
 
 // Sizes
 $base-font-size: 1em;
@@ -19,13 +20,18 @@ $light-gray: #DDD;
 $light-red: #FBE3E4;
 $light-yellow: #FFF6BF;
 $light-green: #E6EFC2;
+$dk-navy: #16292F;
+$dk-turquoise: #0F5056;
+$lt-turquoise: #4A8990;
+$orange: #D3582F;
+$gray: #E0E0E0;
 
 // Background Color
-$base-background-color: white;
+$base-background-color: $gray;
 
 // Font Colors
-$base-font-color: $dark-gray;
-$base-accent-color: $blue;
+$base-font-color: $dk-navy;
+$base-accent-color: $orange;
 
 // Link Colors
 $base-link-color: $base-accent-color;

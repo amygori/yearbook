@@ -50,14 +50,14 @@ ActiveRecord::Schema.define(version: 20140725191046) do
     t.datetime "confirmed_at"
     t.datetime "confirmation_sent_at"
     t.string   "unconfirmed_email"
+    t.integer  "course_id"
+    t.integer  "role_id"
+    t.integer  "cohort_id"
     t.string   "name"
     t.string   "twitter"
     t.string   "github"
     t.string   "linkedin"
     t.string   "image_uid"
-    t.string   "course"
-    t.string   "role"
-    t.string   "cohort"
     t.text     "bio"
     t.boolean  "admin"
     t.datetime "created_at"
@@ -65,7 +65,10 @@ ActiveRecord::Schema.define(version: 20140725191046) do
     t.string   "authentication_token"
   end
 
+  add_index "users", ["cohort_id"], name: "index_users_on_cohort_id", using: :btree
+  add_index "users", ["course_id"], name: "index_users_on_course_id", using: :btree
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
+  add_index "users", ["role_id"], name: "index_users_on_role_id", using: :btree
 
 end

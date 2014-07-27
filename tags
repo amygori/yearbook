@@ -1,0 +1,38 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+AddAuthenticationTokenToUser	db/migrate/20140725174226_add_authentication_token_to_user.rb	/^class AddAuthenticationTokenToUser < ActiveRecord::Migration$/;"	c
+AppRouter	app/assets/javascripts/routers/routers.js	/^var AppRouter = Backbone.Router.extend({$/;"	v
+Application	config/application.rb	/^  class Application < Rails::Application$/;"	c	class:Yearbook
+ApplicationController	app/controllers/application_controller.rb	/^class ApplicationController < ActionController::Base$/;"	c
+ApplicationHelper	app/helpers/application_helper.rb	/^module ApplicationHelper$/;"	m
+Cohort	app/models/cohort.rb	/^class Cohort < ActiveRecord::Base$/;"	c
+Course	app/models/course.rb	/^class Course < ActiveRecord::Base$/;"	c
+CreateCohorts	db/migrate/20140725191028_create_cohorts.rb	/^class CreateCohorts < ActiveRecord::Migration$/;"	c
+CreateCourses	db/migrate/20140725190235_create_courses.rb	/^class CreateCourses < ActiveRecord::Migration$/;"	c
+CreateRoles	db/migrate/20140725191046_create_roles.rb	/^class CreateRoles < ActiveRecord::Migration$/;"	c
+DeviseCreateUsers	db/migrate/20140724222617_devise_create_users.rb	/^class DeviseCreateUsers < ActiveRecord::Migration$/;"	c
+Directory	app/assets/javascripts/collections/collections.js	/^var Directory = Backbone.Collection.extend({$/;"	v
+DirectoryView	app/assets/javascripts/views/views.js	/^var DirectoryView = Backbone.View.extend({$/;"	v
+HomeController	app/controllers/home_controller.rb	/^class HomeController < ApplicationController$/;"	c
+Person	app/assets/javascripts/models/models.js	/^var Person = Backbone.Model.extend({$/;"	v
+PersonView	app/assets/javascripts/views/views.js	/^var PersonView = Backbone.View.extend({$/;"	v
+Role	app/models/role.rb	/^class Role < ActiveRecord::Base$/;"	c
+User	app/models/user.rb	/^class User < ActiveRecord::Base$/;"	c
+UsersController	app/controllers/users_controller.rb	/^class UsersController < ApplicationController$/;"	c
+Yearbook	config/application.rb	/^module Yearbook$/;"	m
+authenticate_user_from_token!	app/controllers/application_controller.rb	/^  def authenticate_user_from_token!$/;"	f	class:ApplicationController
+change	db/migrate/20140724222617_devise_create_users.rb	/^  def change$/;"	f	class:DeviseCreateUsers
+change	db/migrate/20140725174226_add_authentication_token_to_user.rb	/^  def change$/;"	f	class:AddAuthenticationTokenToUser
+change	db/migrate/20140725190235_create_courses.rb	/^  def change$/;"	f	class:CreateCourses
+change	db/migrate/20140725191028_create_cohorts.rb	/^  def change$/;"	f	class:CreateCohorts
+change	db/migrate/20140725191046_create_roles.rb	/^  def change$/;"	f	class:CreateRoles
+ensure_authentication_token	app/models/user.rb	/^  def ensure_authentication_token$/;"	f	class:User
+generate_authentication_token	app/models/user.rb	/^  def generate_authentication_token$/;"	f	class:User
+index	app/controllers/home_controller.rb	/^	def index$/;"	f	class:HomeController
+index	app/controllers/users_controller.rb	/^	def index$/;"	f	class:UsersController
+set_user	app/controllers/users_controller.rb	/^	def set_user$/;"	f	class:UsersController
+show	app/controllers/users_controller.rb	/^	def show$/;"	f	class:UsersController

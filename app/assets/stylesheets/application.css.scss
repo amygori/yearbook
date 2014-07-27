@@ -112,5 +112,20 @@ h2 {
   }
 }
 
+.profile {
+	@include span-columns(6);
+	margin-left: 150px;
+	dd {
+		float: right;
+		overflow: hidden;
+		display: block;
+	}
+	
+	dl {
+		overflow: hidden;
+
+	}
+
+}
 
 

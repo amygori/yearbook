@@ -16,4 +16,8 @@
  *= require_self
  */
 
- 
+ .directory-container, .user-container {
+  @include outer-container;
+}
+
+

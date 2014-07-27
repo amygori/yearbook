@@ -13,14 +13,16 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'dragonfly'
 gem 'faker'
 gem 'rabl-rails'
-gem 'devise'	
+gem 'devise'
 gem 'underscore-rails'
 gem 'rails-assets-backbone'
 gem 'bourbon'
 gem 'neat'
 gem 'bitters'
 gem 'refills'
-gem 'dragonfly-dropbox_data_store'
+gem 'dotenv-rails', group: [:development, :test]
+# gem 'dragonfly-dropbox_data_store'
+gem 'dragonfly-s3_data_store'
 
 group :test do
   gem 'capybara'

@@ -22,7 +22,7 @@ class UsersController < ApplicationController
 		@user = User.find(params[:id])
 	end
 
-    def user_params
-        params.require(:user).permit!
-    end
+    #def user_params
+        #params.require(:user).permit!
+    #end
 end

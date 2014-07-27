@@ -1,4 +1,5 @@
 require 'dragonfly'
+require 'dragonfly/dropbox_data_store'
 
 # Configure
 Dragonfly.app.configure do
@@ -9,9 +10,9 @@ Dragonfly.app.configure do
 
   url_format "/media/:job/:name"
 
-  datastore :file,
-    root_path: Rails.root.join('public/system/dragonfly', Rails.env),
-    server_root: Rails.root.join('public')
+  #datastore :file,
+    #root_path: Rails.root.join('public/system/dragonfly', Rails.env),
+    #server_root: Rails.root.join('public')
 
   datastore :dropbox,
         app_key:              ENV['DROPBOX_APP_KEY'],

@@ -74,6 +74,11 @@ GEM
     dragonfly (1.0.5)
       multi_json (~> 1.0)
       rack
+    dragonfly-dropbox_data_store (0.0.1)
+      dragonfly (~> 1.0)
+      dropbox-sdk (~> 1.6)
+    dropbox-sdk (1.6.4)
+      json
     erubis (2.7.0)
     execjs (2.2.1)
     factory_girl (4.4.0)
@@ -240,6 +245,7 @@ DEPENDENCIES
   database_cleaner
   devise
   dragonfly
+  dragonfly-dropbox_data_store
   factory_girl_rails
   faker
   guard-rspec

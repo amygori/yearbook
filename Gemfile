@@ -20,6 +20,7 @@ gem 'bourbon'
 gem 'neat'
 gem 'bitters'
 gem 'refills'
+gem 'dragonfly-dropbox_data_store'
 
 group :test do
   gem 'capybara'

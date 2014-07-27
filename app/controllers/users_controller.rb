@@ -11,11 +11,11 @@ class UsersController < ApplicationController
 		respond_with @user
 	end
 
-    def create
-        @user = User.new(user_params)
-        @user.save
-        respond_with @user
-    end
+    #def create
+        #@user = User.new(user_params)
+        #@user.save
+        #respond_with @user
+    #end
 
 	private
 	def set_user

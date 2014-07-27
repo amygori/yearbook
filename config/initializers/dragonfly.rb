@@ -12,6 +12,14 @@ Dragonfly.app.configure do
   datastore :file,
     root_path: Rails.root.join('public/system/dragonfly', Rails.env),
     server_root: Rails.root.join('public')
+
+  datastore :dropbox,
+        app_key:              ENV['DROPBOX_APP_KEY'],
+        app_secret:           ENV['DROPBOX_APP_SECRET'],
+        access_token:         ENV['DROPBOX_ACCESS_TOKEN'],
+        access_token_secret:  ENV['DROPBOX_ACCESS_TOKEN_SECRET'],
+        user_id:              ENV['DROPBOX_USER_ID'],     
+        root_path:            Rails.env # optional
 end
 
 # Logger

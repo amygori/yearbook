@@ -11,7 +11,7 @@
 	<div class="directory-container"></div>
 
 	<script type="text/template" class="profile-template">
-		<img src="<%%= user.image_uid %>" class="user-image">
+		<img src="<%%= user.image.url %>" class="user-image">
 		<dl class="user-details">
 			<dt>Name:</dt> <dd><%%= user.name %></dd>
 			<dt>Bio:</dt> <dd><%%= user.bio %></dd>
@@ -26,7 +26,7 @@
 	</script>
 
 	<script type="text/template" class="directory-template">
-		
+
 		<img src="" class="user-image">
 		<ul class="user-details">
 			<li><%%= user.name %></li>
@@ -34,7 +34,7 @@
 			<li><%%= user.role %></li>
 			<li><%%= user.cohort %></li>
 		</ul>
-		
+
 	</script>
 </body>
 </html>

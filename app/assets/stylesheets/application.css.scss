@@ -1,6 +1,9 @@
 @import "bourbon";	
-@import "neat";
 @import "base/_base";
+@import "neat";
+
+@import url(http://fonts.googleapis.com/css?family=Muli|Montserrat|Adamina);
+
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.
@@ -16,8 +19,96 @@
  *= require_self
  */
 
+header {
+	margin: 50px 0 10px 50px;
+}
+
+
+h1 {
+	text-transform: uppercase;
+	color: $dk-navy;
+	span {
+		color: $orange;
+	}
+	font-size: 4em;
+	}
+
+
+h2 {
+	font-family: $serif;
+	color: $dk-turquoise;
+}
+
+.vertical {
+		transform: rotate(270deg);
+		transform-origin: left top 0;
+}
+
  .directory-container, .user-container {
   @include outer-container;
+  @include span-columns(6);
+ 	
 }
+  
+
+.form {
+	margin: 100px;
+}
+
+.hover-tile-outer {
+  $hover-tile-height: 15em;
+
+  background-position: bottom;
+  background-size: cover;
+  background: url("/images/iron-yard-logo-final.png");
+  background-size: cover;
+  background-color: $dk-turquoise;
+  border: 1px solid $base-border-color;
+  height: $hover-tile-height;
+  margin-bottom: $base-line-height;
+  cursor: pointer;
+  float: right;
+  //@include span-columns(3);
+  @include omega(4n);
+  @include media($medium-screen) {
+    width: 40%;
+  }
+
+  .hover-tile-container {
+    height: $hover-tile-height;
+    overflow: hidden;
+  }
+
+  .hover-tile-container:hover > .hover-tile {
+    @include transform(translate(0, -100%));
+  }
+
+  .hover-tile {
+    @include transition(all, .4s ease-in-out);
+    background:inherit;
+    color: white;
+    height:inherit;
+    padding: 1em 1.5em;
+  }
+
+  .hover-tile-visible {
+    color: transparentize(white, .3);
+    font-size: 2em;
+    font-weight: 200;  
+    padding-top: 2em;
+    text-align: center;
+  }
+
+  .hover-tile-hidden {
+    background: transparentize(black, .5);
+    h4 {
+      margin-bottom: .5em;
+    }
+    p {
+      color: transparentize(white, .3);
+    }
+  }
+}
+
 
 

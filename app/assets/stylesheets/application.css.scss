@@ -60,7 +60,7 @@ h2 {
 
   background-position: bottom;
   background-size: cover;
-  background: url("/images/iron-yard-logo-final.png");
+  //background: ;
   background-size: cover;
   background-color: $dk-turquoise;
   border: 1px solid $base-border-color;
@@ -68,8 +68,9 @@ h2 {
   margin-bottom: $base-line-height;
   cursor: pointer;
   float: right;
+  border-radius: 10px;
   //@include span-columns(3);
-  @include omega(4n);
+  //@include omega(4n);
   @include media($medium-screen) {
     width: 40%;
   }
@@ -101,6 +102,7 @@ h2 {
 
   .hover-tile-hidden {
     background: transparentize(black, .5);
+    border-radius: 10px;
     h4 {
       margin-bottom: .5em;
     }

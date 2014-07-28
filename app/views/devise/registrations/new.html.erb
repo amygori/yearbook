@@ -1,0 +1,55 @@
+<h2>Sign up</h2>
+
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <%= devise_error_messages! %>
+
+  <div><%= f.label :name %><br />
+    <%= f.text_field :name %></div>
+
+  <div><%= f.label :email %><br />
+    <%= f.email_field :email, autofocus: true %></div>
+
+  <div><%= f.label :password %><br />
+    <%= f.password_field :password, autocomplete: "off" %></div>
+
+  <div><%= f.label :password_confirmation %><br />
+    <%= f.password_field :password_confirmation, autocomplete: "off" %></div>
+
+  <div><%= f.label :image %><br />
+    <%= f.file_field :image %></div>
+
+  <div><%= f.label :twitter %><br />
+    <%= f.text_field :twitter %></div>
+
+  <div><%= f.label :github %><br />
+    <%= f.text_field :github %></div>
+
+  <div><%= f.label :linkedin %><br />
+    <%= f.text_field :linkedin %></div>
+
+  <div class="field">
+    <%= f.label :cohort_id, "Cohort" %>
+    <%= f.collection_select :cohort_id, Cohort.all, :id, :year %>
+    <%= f.collection_select :cohort_id, Cohort.all, :id, :season %>
+  </div>
+
+  <div class="field">
+    <%= f.label :course_id, "Course" %>
+    <%= f.collection_select :course_id, Course.all, :id, :name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :role_id, "Role" %>
+    <%= f.collection_select :role_id, Role.all, :id, :position %>
+  </div>
+
+  <div><%= f.label :bio %><br />
+    <%= f.text_area :bio %></div>
+
+  <div><%= f.label :admin %><br />
+    <%= f.check_box :admin %></div>
+
+  <div><%= f.submit "Sign up" %></div>
+<% end %>
+
+<%= render "devise/shared/links" %>

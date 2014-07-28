@@ -1,5 +1,5 @@
 var AppRouter = Backbone.Router.extend({
- 
+
   routes: {
     'home'          : '', //login screen  
     'users/:id'     : 'showUser', //show one user's information
@@ -7,11 +7,11 @@ var AppRouter = Backbone.Router.extend({
     //'users/sign_up' : 'createUser', //
     // 'users/sign_in' : 'login'
   },
- 
+
   initialize: function () {
     //this.fetchPromise = collection.fetch();
   },
- 
+
   showUser: function (id) {
     $(document).ready(function () {
       new PersonView({
@@ -19,7 +19,7 @@ var AppRouter = Backbone.Router.extend({
       });
     });
   },
- 
+
   showAll: function () {
     $(document).ready(function () {
       new DirectoryView({
@@ -43,5 +43,5 @@ var AppRouter = Backbone.Router.extend({
 
 //instantiate the Router
 var router = new AppRouter();
- 
+
 Backbone.history.start()

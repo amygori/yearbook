@@ -4,7 +4,7 @@ var AppRouter = Backbone.Router.extend({
     'home'          : '', //login screen  
     'users/:id'     : 'showUser', //show one user's information
     'users'         : 'showAll', //show all users 
-    'users/sign_up' : 'createUser', //
+    //'users/sign_up' : 'createUser', //
     // 'users/sign_in' : 'login'
   },
  
@@ -28,9 +28,9 @@ var AppRouter = Backbone.Router.extend({
     });
   },
 
-  createUser: function () {
+  /*createUser: function () {
       newUserView = new NewUserView();
-  },
+  },*/
 
   /*login: function () {
     $(document).ready(function (){

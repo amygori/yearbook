@@ -3,7 +3,7 @@ attributes :id, :name, :email, :bio, :twitter, :github,
            :linkedin
 
 node(:image) do |user|
-  user.image.url unless user.image.nil?
+  user.image.remote_url unless user.image.nil?
 end
 
 node(:role) do |user|

@@ -1,7 +1,7 @@
 @import "bourbon";	
 @import "base/_base";
 @import "neat";
-
+@import "base/_base";
 @import url(http://fonts.googleapis.com/css?family=Muli|Montserrat|Adamina);
 
 /*
@@ -49,12 +49,13 @@ header {
 		transform-origin: left top 0;
 }
 
-//  .directory-container {
-//   @include span-columns(12);
- 	
-// }
-  
-//LOGIN FORM STYLES
+ .directory-container, .user-container {
+  @include outer-container;
+  @include span-columns(6);
+
+}
+
+
 .form {
 	margin: 100px;
 }
@@ -69,18 +70,19 @@ header {
 
   background-position: bottom;
   background-size: cover;
-  //background: ;
+  background: url("/images/iron-yard-logo-final.png");
   background-size: cover;
   background-color: $dk-turquoise;
   border: 1px solid $base-border-color;
   height: $hover-tile-height;
   margin-bottom: $base-line-height;
   cursor: pointer;
-  //float: right;
-  border-radius: 10px;
- /*  @include media($medium-screen) {
-    width: 33.3%;
-  } */
+  float: right;
+  //@include span-columns(3);
+  @include omega(4n);
+  @include media($medium-screen) {
+    width: 40%;
+  }
 
   .hover-tile-container {
     height: $hover-tile-height;
@@ -102,7 +104,7 @@ header {
   .hover-tile-visible {
     color: transparentize(white, .3);
     font-size: 2em;
-    font-weight: 200;  
+    font-weight: 200;
     padding-top: 2em;
     text-align: center;
   }

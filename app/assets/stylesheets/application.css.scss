@@ -56,7 +56,8 @@ header {
   
 //LOGIN FORM STYLES
 .form {
-	margin: 100px;
+	@include span-columns(6);
+	@include shift(3);
 }
 
 
@@ -126,20 +127,16 @@ header {
 
 //SINGLE STUDENT PROFILE STYLES
 .profile {
-	@include span-columns(6);
+	@include span-columns(8);
 	//margin-left: 150px;
 	img {
 		float: right;
 	}
-	dd {
+	li {
 		float: right;
 		overflow: hidden;
-		display: block;
+		display: inline;
 	}
 
-	dl {
-		overflow: hidden;
-
-	}
 
 }

@@ -4,7 +4,7 @@ class ApplicationController < ActionController::Base
   #protect_from_forgery with: :null_session
    before_action :configure_permitted_parameters, if: :devise_controller?
 
-  before_action :configure_permitted_parameters, if: :devise_controller?
+   before_filter :authenticate_user_from_token!
 
   protected
 
@@ -20,7 +20,6 @@ class ApplicationController < ActionController::Base
     devise_parameter_sanitizer.for(:sign_up) << :bio
     devise_parameter_sanitizer.for(:sign_up) << :admin
   end
-  # before_filter :authenticate_user_from_token!
   # This is Devise's authentication
   # before_filter :authenticate_user!
 

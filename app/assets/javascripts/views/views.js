@@ -48,7 +48,7 @@ var DirectoryView = Backbone.View.extend({
 
 
 //VIEW: create a user
-var NewUserView = Backbone.View.extend({
+/*var NewUserView = Backbone.View.extend({
 
 	initialize: function () {
 		this.listenTo(this.collection, 'add', this.render);
@@ -65,7 +65,7 @@ var NewUserView = Backbone.View.extend({
 	}
 
 
-})
+})*/
 
 //VIEW: login
 /*var LoginView = Backbone.View.extend({
@@ -73,5 +73,38 @@ var NewUserView = Backbone.View.extend({
 	initialize: function () {
 		window.prompt = null;
 	},
-})*/
+
+	events: "click .button": "login",
+
+	render: function () {
+		var self = this;
+
+	}
+
+	login: function () {
+		if(($'.input-box').length > 0) {
+			var formValues = {
+            email: $('#email').val(),
+            password: $('#password').val()
+        };
+
+        $.ajax({
+            url:url,
+            type:'POST',
+            dataType:'json',
+            data: formValues,
+            success:function (data) {
+                console.log(["Login request details: ", data]);
+               
+                if(data.error) {  // If there is an error, show the error messages
+                    $('.alert-error').text(data.error.text).show();
+                }
+                else { // If not, send them back to the home page
+                    window.location.replace('#');
+                }
+            }
+        });
+    }
+	}
+});*/
 

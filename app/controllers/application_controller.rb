@@ -13,9 +13,9 @@ class ApplicationController < ActionController::Base
     devise_parameter_sanitizer.for(:sign_up) << :twitter
     devise_parameter_sanitizer.for(:sign_up) << :github
     devise_parameter_sanitizer.for(:sign_up) << :linkedin
-    devise_parameter_sanitizer.for(:sign_up) << :course
-    devise_parameter_sanitizer.for(:sign_up) << :role
-    devise_parameter_sanitizer.for(:sign_up) << :cohort
+    devise_parameter_sanitizer.for(:sign_up) << :course_id
+    devise_parameter_sanitizer.for(:sign_up) << :role_id
+    devise_parameter_sanitizer.for(:sign_up) << :cohort_id
     devise_parameter_sanitizer.for(:sign_up) << :bio
     devise_parameter_sanitizer.for(:sign_up) << :admin
   end

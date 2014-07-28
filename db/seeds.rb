@@ -15,7 +15,7 @@
 		github: "ghuser1#{n}",
 		linkedin: "liuser1#{n}",
 		bio: Faker::Lorem.paragraph,
-		admin: false)
+		admin: true)
 end
 
 10.times do |n|
@@ -72,16 +72,19 @@ Cohort.create(
 
 Cohort.create(
 	season: 'Fall',
-	year: '2014')
+	year: '2015')
 
-Course.create(
-	name: 'Ruby on Rails')
+cohorts = ['Spring', 'Summer', 'Fall', 'Winter']
+cohorts.each do |cohort|
+	Course.create(season: cohort)
+end
 
-Course.create(
-	name: 'Front End')
+courses = ['Front End', 'Ruby on Rails']
+courses.each do |course|
+	Course.create(name: course)
+end
 
 roles = ['Student', 'Teacher', 'Staff']
 roles.each do |role|
-	Role.create(
-		position: role)
+	Role.create(position: role)
 end

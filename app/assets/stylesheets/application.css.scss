@@ -19,12 +19,10 @@
  *= require_self
  */
 
+//GLOBAL STYLES
 header {
 	margin: 50px 0 10px 50px;
-}
-
-
-h1 {
+	h1 {
 	text-transform: uppercase;
 	color: $dk-navy;
 	span {
@@ -34,9 +32,16 @@ h1 {
 	}
 
 
-h2 {
-	font-family: $serif;
-	color: $dk-turquoise;
+	h2 {
+		font-family: $serif;
+		color: $dk-turquoise;
+	}
+}
+
+.main {
+	@include outer-container;
+	margin: auto;
+	max-width: 965px;
 }
 
 .vertical {
@@ -44,19 +49,23 @@ h2 {
 		transform-origin: left top 0;
 }
 
- .directory-container, .user-container {
-  @include outer-container;
-  @include span-columns(6);
+//  .directory-container {
+//   @include span-columns(12);
  	
-}
+// }
   
-
+//LOGIN FORM STYLES
 .form {
 	margin: 100px;
 }
 
+
+//DIRECTORY STYLES
 .hover-tile-outer {
-  $hover-tile-height: 15em;
+   @include span-columns(3);
+   @include omega(4n);
+
+  $hover-tile-height: 12em;
 
   background-position: bottom;
   background-size: cover;
@@ -67,13 +76,11 @@ h2 {
   height: $hover-tile-height;
   margin-bottom: $base-line-height;
   cursor: pointer;
-  float: right;
+  //float: right;
   border-radius: 10px;
-  //@include span-columns(3);
-  //@include omega(4n);
-  @include media($medium-screen) {
-    width: 40%;
-  }
+ /*  @include media($medium-screen) {
+    width: 33.3%;
+  } */
 
   .hover-tile-container {
     height: $hover-tile-height;
@@ -103,6 +110,9 @@ h2 {
   .hover-tile-hidden {
     background: transparentize(black, .5);
     border-radius: 10px;
+    a {
+    	color: #FFF;
+    }
     h4 {
       margin-bottom: .5em;
     }
@@ -112,20 +122,24 @@ h2 {
   }
 }
 
+
+
+//SINGLE STUDENT PROFILE STYLES
 .profile {
 	@include span-columns(6);
-	margin-left: 150px;
+	//margin-left: 150px;
+	img {
+		float: right;
+	}
 	dd {
 		float: right;
 		overflow: hidden;
 		display: block;
 	}
-	
+
 	dl {
 		overflow: hidden;
 
 	}
 
 }
-
-

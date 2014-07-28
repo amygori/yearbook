@@ -2,8 +2,8 @@ var AppRouter = Backbone.Router.extend({
  
   routes: {
     'home'          : '', //login screen  
-    'users/:id'      : 'showUser', //show one user's information
-    'users'     : 'showAll' //show all users 
+    'users/:id'     : 'showUser', //show one user's information
+    'users'         : 'showAll' //show all users 
   },
  
   initialize: function () {

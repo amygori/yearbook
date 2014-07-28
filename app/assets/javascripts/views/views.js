@@ -4,7 +4,7 @@
 //VIEW: single person profile
 var PersonView = Backbone.View.extend({
 
-	template: _.template($('.profile-template').html() || ''),
+	//template: _.template($('.profile-template').html() || ''),
  
   	initialize: function () {
  		this.listenTo(this.model, 'sync', this.render);
@@ -24,6 +24,7 @@ var DirectoryView = Backbone.View.extend({
 	initialize: function (){
 		this.listenTo(this.collection, 'sync', this.render);
      	this.collection.fetch();
+     	console.log(this.collection)
 	},
 
 	getUsers: function () {
@@ -38,6 +39,7 @@ var DirectoryView = Backbone.View.extend({
 		var template = _.template($('.directory-template').html().trim());
 		var output = '';
 		_.each(this.getUsers(), function (user) {
+			//console.log(user);
 			output += template({user: user});
 		});
 		$('.directory-container').html(output);

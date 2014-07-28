@@ -21,6 +21,9 @@ gem 'neat'
 gem 'bitters'
 gem 'refills'
 gem "font-awesome-rails"
+gem 'dotenv-rails', group: [:development, :test]
+# gem 'dragonfly-dropbox_data_store'
+gem 'dragonfly-s3_data_store'
 
 group :test do
   gem 'capybara'

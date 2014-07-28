@@ -1,4 +1,6 @@
 require 'dragonfly'
+require 'dragonfly/s3_data_store'
+#require 'dragonfly/dropbox_data_store'
 
 # Configure
 Dragonfly.app.configure do
@@ -9,10 +11,23 @@ Dragonfly.app.configure do
 
   url_host "http://localhost:3000"
   url_format "/media/:job/:name"
+  # remote_url_for(:s3)
+  #datastore :file,
+    #root_path: Rails.root.join('public/system/dragonfly', Rails.env),
+    #server_root: Rails.root.join('public')
 
-  datastore :file,
-    root_path: Rails.root.join('public/system/dragonfly', Rails.env),
-    server_root: Rails.root.join('public')
+  datastore :s3,
+    bucket_name: 'tiy_yearbook',
+    access_key_id: 'AKIAIS5AYCMA5ATS4K7A',
+    secret_access_key: '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'
+
+  #datastore :dropbox,
+        #app_key:              ENV['DROPBOX_APP_KEY'],
+        #app_secret:           ENV['DROPBOX_APP_SECRET'],
+        #access_token:         ENV['DROPBOX_ACCESS_TOKEN'],
+        #access_token_secret:  ENV['DROPBOX_ACCESS_TOKEN_SECRET'],
+        #user_id:              ENV['DROPBOX_USER_ID'],     
+        #root_path:            Rails.env # optional
 end
 
 # Logger

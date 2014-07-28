@@ -24,7 +24,7 @@ var DirectoryView = Backbone.View.extend({
 	initialize: function () {
 		this.listenTo(this.collection, 'sync', this.render);
      	this.collection.fetch();
-     	console.log(this.collection)
+     	console.log(this.collection);
 	},
 
 	getUsers: function () {

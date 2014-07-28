@@ -1,3 +1,5 @@
+//copied  7/28 2:23 pm commit version before merging upstream master
+
 @import "bourbon";	
 @import "base/_base";
 @import "neat";
@@ -49,13 +51,12 @@ header {
 		transform-origin: left top 0;
 }
 
- .directory-container, .user-container {
-  @include outer-container;
-  @include span-columns(6);
-
-}
-
-
+//  .directory-container {
+//   @include span-columns(12);
+ 	
+// }
+  
+//LOGIN FORM STYLES
 .form {
 	@include span-columns(6);
 	@include shift(3);
@@ -71,19 +72,18 @@ header {
 
   background-position: bottom;
   background-size: cover;
-  background: url("/images/iron-yard-logo-final.png");
+  //background: ;
   background-size: cover;
   background-color: $dk-turquoise;
   border: 1px solid $base-border-color;
   height: $hover-tile-height;
   margin-bottom: $base-line-height;
   cursor: pointer;
-  float: right;
-  //@include span-columns(3);
-  @include omega(4n);
-  @include media($medium-screen) {
-    width: 40%;
-  }
+  //float: right;
+  border-radius: 10px;
+ /*  @include media($medium-screen) {
+    width: 33.3%;
+  } */
 
   .hover-tile-container {
     height: $hover-tile-height;
@@ -105,7 +105,7 @@ header {
   .hover-tile-visible {
     color: transparentize(white, .3);
     font-size: 2em;
-    font-weight: 200;
+    font-weight: 200;  
     padding-top: 2em;
     text-align: center;
   }

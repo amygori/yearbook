@@ -6,7 +6,7 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
 </head>
 <body>
-
+<div class="wrapper-for-content-outside-of-footer">
 	<header>
 	<h1>The Iron Yard <span>Academy</span></h1>
 		<h2>Durham, NC</h2>
@@ -60,12 +60,55 @@
 		<script type="text/template" class="logIn-form"></script>
 	
 			<form class="form">
-				<input class="input-box" placeholder="your email address" type="text" autofocus />
-    	        <input class="input-box" placeholder="your name" type="text" />
+				<input class="input-box" placeholder="your name" type="text" autofocus />
+    	        <input class="input-box" placeholder="your email address" type="text" />
+    	        <select name="course">
+  					<option value="frontend" selected>Front End</option> 
+  					<option value="rails">Ruby on Rails</option>
+				</select>
+				<select name="cohort">
+  					<option value="cohort1" selected>Summer 2014</option> 
+  					<option value="cohort2">Fall 2014</option>
+				</select>    	        
     	        <button>submit</button>
     	    </form>
     	</script>
 
     </section>
+
+  
+ 	<div class="push"></div>
+</div>
+
+<footer class="footer-2">
+  <div class="footer-logo">
+    <img src="iron-yard-logo-final.png" alt="">
+  </div>
+    <ul>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Contact</a></li>
+      <li><a href="#"></a></li>
+    </ul>
+
+    <div class="footer-secondary-links">
+      <ul>
+        <li><a href="#">Link</a></li>
+        <li><a href="#">Link</a></li>
+      </ul>
+
+      <ul class="footer-social">
+        <li><a href="#">
+          <i class="fa fa-github"></i>
+          </a></li>
+        <li><a href="#">
+		<i class="fa fa-twitter"></i>        
+		</a></li>
+        <li><a href="#">
+        <i class="fa fa-linkedin"></i>
+        </a></li>
+      </ul>
+    </div>
+</footer>
+
 </body>
 </html>

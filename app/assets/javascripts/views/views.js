@@ -21,7 +21,7 @@ var PersonView = Backbone.View.extend({
 //VIEW: list of all users
 var DirectoryView = Backbone.View.extend({
 
-	initialize: function (){
+	initialize: function () {
 		this.listenTo(this.collection, 'sync', this.render);
      	this.collection.fetch();
      	console.log(this.collection)
@@ -35,7 +35,7 @@ var DirectoryView = Backbone.View.extend({
 		return users;
 	},
 
-	render: function(){
+	render: function() {
 		var template = _.template($('.directory-template').html().trim());
 		var output = '';
 		_.each(this.getUsers(), function (user) {
@@ -45,6 +45,33 @@ var DirectoryView = Backbone.View.extend({
 		$('.directory-container').html(output);
 	}
 });
-//instantiate the directory view
 
+
+//VIEW: create a user
+var NewUserView = Backbone.View.extend({
+
+	initialize: function () {
+		this.listenTo(this.collection, 'add', this.render);
+		this.collection.fetch();
+
+	},
+
+	render: function () {
+		var self = this;
+			self.$el.html('');
+			return this;
+            $(this.el).hide();
+        	//$(this.el).show();
+	}
+
+
+})
+
+//VIEW: login
+/*var LoginView = Backbone.View.extend({
+
+	initialize: function () {
+		window.prompt = null;
+	},
+})*/
 

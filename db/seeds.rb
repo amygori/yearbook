@@ -72,12 +72,8 @@ Cohort.create(
 
 Cohort.create(
 	season: 'Fall',
-	year: '2015')
+	year: '2014')
 
-cohorts = ['Spring', 'Summer', 'Fall', 'Winter']
-cohorts.each do |cohort|
-	Course.create(season: cohort)
-end
 
 courses = ['Front End', 'Ruby on Rails']
 courses.each do |course|

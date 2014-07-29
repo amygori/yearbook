@@ -95,13 +95,7 @@ var DirectoryView = Backbone.View.extend({
             data: formValues,
             success:function (data) {
                 console.log(["Login request details: ", data]);
-               
-                if(data.error) {  // If there is an error, show the error messages
-                    $('.alert-error').text(data.error.text).show();
-                }
-                else { // If not, send them back to the home page
-                    window.location.replace('#');
-                }
+              	return.this;
             }
         });
     }

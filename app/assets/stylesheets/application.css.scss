@@ -4,6 +4,7 @@
 
 @import url(http://fonts.googleapis.com/css?family=Muli|Montserrat|Adamina);
 @import "font-awesome";
+
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.
@@ -98,6 +99,7 @@ header {
     color: white;
     height:inherit;
     padding: 1em 1.5em;
+    max-width: 100%;
   }
 
   .hover-tile-visible {
@@ -106,6 +108,7 @@ header {
     font-weight: 200;  
     padding-top: 2em;
     text-align: center;
+    //max-width: 100%;
   }
 
   .hover-tile-hidden {
@@ -367,4 +370,3 @@ html, body {
     }
   }
 }
-

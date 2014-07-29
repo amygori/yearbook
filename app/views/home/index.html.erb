@@ -41,8 +41,7 @@
 
 			<div class="hover-tile-outer">
   				<div class="hover-tile-container">
-    				<div class="hover-tile hover-tile-visible">
-      					<img src="<%%= user.image_uid%>" class="user-image">
+    				<div class="hover-tile hover-tile-visible" style="background-image: url('<%%= user.image %>')">
     				</div>
     				<div class="hover-tile hover-tile-hidden">
       					<a href="'users/' + '<%%= user.id %>'"><h4><%%= user.name %></h4></a>
@@ -82,7 +81,7 @@
 
 <footer class="footer-2">
   <div class="footer-logo">
-    <img src="iron-yard-logo-final.png" alt="">
+    <%= image_tag 'iron-yard-logo-final.png' %>
   </div>
     <ul>
       <li><a href="#">About</a></li>
@@ -98,7 +97,7 @@
 
       <ul class="footer-social">
         <li><a href="#">
-          <i class="fa fa-github"></i>
+           <i class="fa fa-github-alt"></i>
           </a></li>
         <li><a href="#">
 		<i class="fa fa-twitter"></i>        

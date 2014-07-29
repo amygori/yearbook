@@ -37,7 +37,9 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable#, :confirmable
 
-  dragonfly_accessor :image
+  dragonfly_accessor :image do
+    after_assign { |a| self.image = a.thumb('220x200#') }
+  end
 
   belongs_to :role
   belongs_to :cohort
@@ -50,6 +52,7 @@ class User < ActiveRecord::Base
       self.authentication_token = generate_authentication_token
     end
   end
+
 
   private
 

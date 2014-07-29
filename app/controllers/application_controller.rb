@@ -4,9 +4,9 @@ class ApplicationController < ActionController::Base
   #protect_from_forgery with: :null_session
 
   # This is Devise's authentication
-   before_filter :authenticate_user!
+ #  before_filter :authenticate_user!
    before_action :configure_permitted_parameters, if: :devise_controller?
-   before_filter :authenticate_user_from_token!
+ #  before_filter :authenticate_user_from_token!
 
   protected
 
@@ -37,8 +37,4 @@ class ApplicationController < ActionController::Base
     end
   end
 
-  #protected
-  def configure_permitted_parameters
-      devise_parameter_sanitizer.for(:sign_up) << :image
-  end
 end
